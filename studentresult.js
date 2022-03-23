@@ -35,29 +35,27 @@ const subject={
 
 }
 
-/*function getstudent(stud,subj){
-    let get=student[stud];
-    if (get== !object && get[subj] !=='object'){
-        return' not found';
-    }else{
-        return student[stud];
-    }
-}
-   */ 
+
 
   
-    function result(stud,subj){
+var result=(stud,subj)=>{
        
-        /*if (subject[subj]==undefined)*/ if(student[stud]==undefined) {
-            console.log(`your research not found`);
-            } else {
+    /**/ if(student[stud]==undefined) {
+        console.log('student'+" "+stud +" "+` not found`);
+        } else {
+            if (subject[subj]==undefined){
+                console.log(subj+ ' :'+`this subject not found`);
+            }else{
                 var st=student[stud];
                 if(st[subj].points<subject[subj].passRate){
-                    console.log(stud +' your are fail');
-                }else{console.log(stud +" " + 'your are pass');}
+                    console.log(stud +' your are fail'+" "+ subj);
+                }else{console.log(stud +" " + 'your are pass' + " "+ subj);}
                 
+
             }
-            console.log('')
-    }
+           
+        }
+        console.log('')
+}
 //console.log(getstudent('davi'));
-console.log(result('david','java'));
+console.log(result('jackson','javasc'));
